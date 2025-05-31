@@ -1,18 +1,70 @@
 body,
 html {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
+  background: linear-gradient(#066eb7, #ffffff);
 }
 
-#textarea-container {
+header {
+  position: fixed;
+  top: 0;
+  height: 25%;
+  width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 3rem;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#input-container label {
+}
+
+#output-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+textarea {
+  background-color: #5798cc;
+}
+textarea::placeholder {
+  color: #58595b;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
 }
 
 footer {
-  height: 20%;
+  position: fixed;
+  bottom: 0;
+  height: 2.5%;
+  width: 100%;
+  background-color: #a6a8ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

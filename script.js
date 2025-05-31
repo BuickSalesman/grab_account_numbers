@@ -29,3 +29,8 @@ document.getElementById("input").addEventListener("input", () => {
   let outputString = getAcctNumbers(inputString);
   document.getElementById("output").value = outputString;
 });
+
+document.getElementById("copy-button").addEventListener("click", () => {
+  let outputText = document.getElementById("output").value;
+  navigator.clipboard.writeText(outputText);
+});

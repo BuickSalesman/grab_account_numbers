@@ -3,36 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ID Separator</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <h1>Welcome to the ACCT# extractor tool!</h1>
+      <h2>
+        To use effectively, hit Ctrl+A to select the entire text content of any reminder you are working, then Ctrl+C to
+        copy the selected text. Then use Ctrl+V to paste the copied text into the input area, and the account numbers
+        will be extracted into the output area. You can then click the button below the output area to copy the numbers
+        directly to your keyboard, and then paste them directly into the Epic account record.
+      </h2>
+    </header>
 
-    <div id="input-container">
-      <label for="input">Your copied text:</label>
-      <!-- prettier-ignore -->
-      <textarea 
+    <main>
+      <div id="input-container">
+        <label for="input">Input area:</label>
+        <!-- prettier-ignore -->
+        <textarea 
         id="input" 
         name="input" 
-        placeholder="Paste your text here" 
+        placeholder="Paste your text here!" 
         cols="40" 
-        rows="20"
+        rows="30"
         ></textarea>
-      <small id="input-hint">You can paste any copied text above.</small>
-    </div>
+        <small id="input-hint">⬆️ You can paste any copied text above ⬆️</small>
+      </div>
 
-    <div id="output-contaner">
-      <label for="output">You can copy this text and paste into the Epic account number search all at once:</label>
-      <textarea
-        id="output"
-        name="output"
-        placeholder="No account numbers found yet!"
-        cols="40"
-        rows="20"
-        readonly
-      ></textarea>
-    </div>
+      <div id="output-container">
+        <label for="output">Output area:</label>
+        <textarea
+          id="output"
+          name="output"
+          placeholder="No account numbers found yet!"
+          cols="40"
+          rows="30"
+          readonly
+        ></textarea>
+        <button id="copy-button">Click to copy text to clipboard!</button>
+      </div>
+    </main>
 
     <footer>
       <div>This tool processes all data locally and does not store or transmit any information.</div>
