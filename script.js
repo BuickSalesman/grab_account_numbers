@@ -2,24 +2,25 @@ function isCapital(c) {
   return "A".charCodeAt(0) <= c.charCodeAt(0) && c.charCodeAt(0) <= "Z".charCodeAt(0);
 }
 
-function isNumber(c) {
-  return "0".charCodeAt(0) <= c.charCodeAt(0) && c.charCodeAt(0) <= "9".charCodeAt(0);
-}
-
 function getAcctNumbers(string) {
-  let formattedReturnString = "";
-  let acctNumArr = [];
-  let acctPrefix = "";
-  let acctSuffix = "";
-  for (let letter of string) {
-    //do stuff
+  let res = "";
+  let capCount = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (capCount === 3 && string[i] === "-") {
+      if (string[i + 11] === "-") {
+        res += string.slice(i + 1, i + 11) + "\n";
+        i += 11;
+      }
+    }
+
+    if (isCapital(string[i])) {
+      capCount++;
+    } else {
+      capCount = 0;
+    }
   }
 
-  for (const acct of acctNumArr) {
-    formattedReturnString = formattedReturnString + acct + "\n";
-  }
-
-  return formattedReturnString;
+  return res;
 }
 
 document.getElementById("input").addEventListener("input", () => {
