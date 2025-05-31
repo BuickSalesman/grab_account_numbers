@@ -7,7 +7,36 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div>yo whaddup</div>
+    <header></header>
+
+    <div id="input-container">
+      <label for="input">Your copied text:</label>
+      <!-- prettier-ignore -->
+      <textarea 
+        id="input" 
+        name="input" 
+        placeholder="Paste your text here" 
+        cols="40" 
+        rows="20"
+        ></textarea>
+      <small id="input-hint">You can paste any copied text above.</small>
+    </div>
+
+    <div id="output-contaner">
+      <label for="output">You can copy this text and paste into the Epic account number search all at once:</label>
+      <textarea
+        id="output"
+        name="output"
+        placeholder="No account numbers found yet!"
+        cols="40"
+        rows="20"
+        readonly
+      ></textarea>
+    </div>
+
+    <footer>
+      <div>This tool processes all data locally and does not store or transmit any information.</div>
+    </footer>
 
     <script src="script.js"></script>
   </body>

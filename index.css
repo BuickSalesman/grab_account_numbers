@@ -3,4 +3,16 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#textarea-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 20%;
 }
